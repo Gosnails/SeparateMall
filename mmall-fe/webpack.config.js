@@ -36,6 +36,14 @@ var config = {
         loaders: [
             { test: /\.css$/, loader: ExtractTextPlugin.extract("style-loader","css-loader") },
             { test: /\.(gif|png|jpg|woff|svg|eot|ttf)\??.*$/, loader: 'url-loader?limit=100&name=resource/[name].[ext]' },
+            {
+                test: /\.string$/, 
+                loader: 'html-loader',
+                query : {
+                    minimize : true,
+                    removeAttributeQuotes : false
+                }
+            }
         ]
     },
     resolve : {
