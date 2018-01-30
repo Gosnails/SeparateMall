@@ -30,7 +30,6 @@ var header = {
     },
     // 搜索的提交
     searchSubmit: function() {
-        console.log(1);
         var keyword = $.trim($('#search-input').val());
         // 如果提交有keyword，正常跳转到list页
         if (keyword) {

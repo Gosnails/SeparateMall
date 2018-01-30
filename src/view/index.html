@@ -3,7 +3,7 @@
 
 <head>
     <%= require('html-loader!./layout/header-common.html') %>
-        <title>happymmall电商平台</title>
+        <title><%= htmlWebpackPlugin.options.title%></title>
 </head>
 
 <body>
@@ -12,7 +12,7 @@
     <div class="page-wrap w">
             <%= require('html-loader!./layout/nav-side.html') %>
             <div class="content width-nav">
-
+                text
             </div>
     </div>
         <%= require('html-loader!./layout/footer.html') %>

@@ -38,4 +38,4 @@ var navSide = {
     }
 };
 
-module.exports = navSide.init();
+module.exports = navSide;

@@ -5,5 +5,5 @@ var navSide = require('page/common/nav-side/index.js');
 var _mm = require('util/mm.js');
 
 navSide.init({
-    name: 'user-center'
+    name: 'order-list'
 });
