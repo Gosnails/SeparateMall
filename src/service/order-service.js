@@ -21,11 +21,33 @@ var _order = {
             error: reject
         });
     },
-      // 获取订单列表
-      getOrderList: function (listParam, resolve, reject) {
+    // 获取订单列表
+    getOrderList: function (listParam, resolve, reject) {
         _mm.request({
             url: _mm.getServerUrl('/order/list.do'),
             data: listParam,
+            success: resolve,
+            error: reject
+        });
+    },
+    // 获取订单详情
+    getOrderDetail: function (orderNumber, resolve, reject) {
+        _mm.request({
+            url: _mm.getServerUrl('/order/detail.do'),
+            data: {
+                orderNo: orderNumber
+            },
+            success: resolve,
+            error: reject
+        });
+    },
+    // 取消订单
+    cancelOrder: function (orderNumber, resolve, reject) {
+        _mm.request({
+            url: _mm.getServerUrl('/order/cancel.do'),
+            data: {
+                orderNo: orderNumber
+            },
             success: resolve,
             error: reject
         });
