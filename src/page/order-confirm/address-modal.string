@@ -22,10 +22,10 @@
                         所在城市：
                     </label>
                     <select class="form-item" id="receiver-province">
-                        <option value="">请选择</option>
+                        <option value="请选择">请选择</option>
                     </select>
                     <select class="form-item" id="receiver-city">
-                        <option value="">请选择</option>
+                        <option value="请选择">请选择</option>
                     </select>
                 </div>
                 <div class="form-line">

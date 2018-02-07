@@ -66,7 +66,7 @@ var page = {
                     }
                 });
             }, function (errMsg) {
-
+                _mm.errorTips(errMsg);
             });
         });
         // 地址的删除

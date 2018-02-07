@@ -21,6 +21,9 @@ var addressModal = {
         this.$modalWrap.find('#receiver-province').change(function () {
             var selectedProvince = $(this).val();
             _this.loadCites(selectedProvince);
+            if (_this.option.isUpdate) {
+                $('#receiver-city').val('请选择');
+            }
         });
         // 提交收货地址
         this.$modalWrap.find('.address-btn').click(function () {
@@ -136,7 +139,7 @@ var addressModal = {
     },
     // 获取select框的选项，输入:array，输出: HTML
     getSelectOption: function (optionArray) {
-        var html = '<option value="">请选择</option>';
+        var html = '<option value="请选择">请选择</option>';
         for (var i = 0, length = optionArray.length; i < length; i++) {
             html += '<option value="' + optionArray[i] + '">' + optionArray[i] + '</option>';
         }
